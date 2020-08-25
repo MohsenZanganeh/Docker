@@ -5,9 +5,16 @@ services:
     build: .
     container_name: node_test
     image: node_test
+    depends_on:
+      - mongo      
+    command: npm start  
     environment:
       - "PORT=3800" #change environment variable for production
     ports:
       - "3800:3800" #change Port fo production such as 3900
-
+  mongo:
+    container_name: mongo
+    image: mongo
+    volumes:
+      - ./db:/data/db
 

@@ -1,7 +1,7 @@
 let express = require("express")
 let mongo   = require("mongo")
 const { MongoClient } = require("mongodb")
-let db=new MongoClient("mongodb://host:27017/testdb")
+let db=new MongoClient("mongodb://mongo:27017/testdb")
 require("dotenv").config()
 
 let app = express()

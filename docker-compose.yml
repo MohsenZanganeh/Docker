@@ -1,23 +1,13 @@
 version: "3"
 services: 
   app:
-    restart: always
+    restart: always # For production
     build: .
     container_name: node_test
     image: node_test
     environment:
-      - "PORT=3800"
+      - "PORT=3800" #change environment variable for production
     ports:
-      - "3800:3800"
-    networks:
-      - mongo  
-  mongo:
-    restart: always
-    container_name: mongo
-    image: mongo
-    networks:
-      - mongo
+      - "3800:3800" #change Port fo production such as 3900
 
-networks:
-  mongo:
-# Defult docker compos create a network between services
+

@@ -5,8 +5,8 @@ docker run -it -d --name="name_container" "image                       run conta
 docker run ... -P ...                                                  publish all port in app      
 docker rm -f "container,..."                                           remove and force container
 docker rmi -f "image,..."                                              remove and force image
-docker ps -a                                                           Show Run container Run
-docker ps                                                              Show All container
+docker ps -a                                                           Show All container 
+docker ps                                                              Show All container Run
 docker images                                                          show All image
 docker images "image_name"                                             Show image target
 docker pull -a "image_name"                                            Download All tag image  

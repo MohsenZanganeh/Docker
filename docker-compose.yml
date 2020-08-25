@@ -9,3 +9,8 @@ services:
       - "PORT=3800"
     ports:
       - "3800:3800"
+  mongo:
+    restart: always
+    container_name: mongo
+    image: mongo
+# Defult docker compos create a network between services

@@ -1,0 +1,27 @@
+docker build "Path_App"                                                Build image with set Path app
+docker build -t "image_name" "Path_App"                                build image with tage name and set Path app
+docker run -e PORT=3800 -p3800:3800 "image"                            run app on port 3800 with env PORT=3000 and name image
+docker run -it -d --name="name_container" "image                       run container with set name and run in background
+docker run ... -P ...                                                  publish all port in app      
+docker rm -f "container,..."                                           remove and force container
+docker rmi -f "image,..."                                              remove and force image
+docker ps -a                                                           Show Run container Run
+docker ps                                                              Show All container
+docker images                                                          show All image
+docker images "image_name"                                             Show image target
+docker pull -a "image_name"                                            Download All tag image  
+docker pull --disable-content-trust "image_name"                       Download image without verification
+docker logs "name_container"                                           Show Logs container
+docker exec -it "name_container" "bash"                                work with shell inside container
+docker run ... -v "Path in Host":"Path in docker" ....                 set Volume for Storage date
+--example: docker run ... -p 3800:3800 ... -v ./mongodb:/data/db       Map Data path from Docker:/data/db in Host:/mongodb path
+docker run ... --restart=always ...  "image_name"                      if container die,container will restart
+docker tag "image_name:tag_name" "image_name:tag_name(new)"            create new tag from image(dont create new image from it)
+docker search                                                          Search image from dockerhub(with Vpn)
+docker search --limit 10 --filter "is-official=true" "image_name"      Search First 10 images official from dockerhub(with Vpn)
+docker network ls                                                      Show All network 
+docker network create "name_network"                                   create New network
+docker network create --driver "driver_name" "name_network"            create New network with specific driver
+docker run -p 3800:3800 --network "image_name"                         run image with connect to specific network
+
+

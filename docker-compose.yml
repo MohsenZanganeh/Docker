@@ -1,6 +1,11 @@
-version: "2.4"
-services:
+version: "3"
+services: 
   app:
-    extends: 
-      file: common.yml
-      service: app
+    restart: always
+    build: .
+    container_name: node_test
+    image: node_test
+    environment:
+      - "PORT=3800"
+    ports:
+      - "3800:3800"
